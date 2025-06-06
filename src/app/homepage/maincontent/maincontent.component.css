@@ -1,0 +1,23 @@
+.mainpage {
+  margin-top: 5%;
+}
+
+.custom-carousel-heading {
+  font-size: 3rem !important;
+  /* Reduce size */
+  max-width: 700px;
+  /* Limit width to force better wrapping */
+  line-height: 1.2;
+  /* Adjust spacing */
+  word-wrap: break-word;
+  margin: 0 auto;
+  /* Center if needed */
+}
+
+@media (min-width: 992px) {
+  .custom-carousel-heading {
+    font-size: 3rem !important;
+    max-width: 700px;
+    line-height: 1.2; 
+  }
+}

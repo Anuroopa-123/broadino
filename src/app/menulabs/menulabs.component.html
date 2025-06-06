@@ -1,0 +1,45 @@
+<!-- Add a wrapper div with class="content-wrapper" -->
+<div class="content-wrapper">
+  <section class="top_title">
+    <!-- <div class="card">
+      <p>
+        <span class="highlight">Broadino</span> Provides a good work culture...
+      </p>
+    </div> -->
+
+    <div class="card-list-container">
+      <div class="card">
+        <h2>Services We Provide</h2>
+        <ul class="services-list">
+          <li>Industry solutions using our 7 specialized centers</li>
+          <li>Practical skill development aligned with industrial needs</li>
+          <li>Access to modern software and hardware</li>
+          <li>Support in turning ideas into functional products</li>
+          <li>Hands-on training and real-world use cases</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="lab-section" *ngIf="currentItem">
+    <div class="lab-container">
+      <div class="lab-title">
+        <h2>{{ currentItem.title }}</h2>
+      </div>
+
+      <div class="lab-slide">
+        <div class="lab-image">
+          <img [src]="currentItem.image" [alt]="currentItem.title" />
+        </div>
+
+        <div class="lab-details">
+          <p>{{ currentItem.description }}</p>
+        </div>
+      </div>
+
+      <div class="software" *ngIf="currentItem.software">
+        <p><strong>Software Using:</strong> {{ currentItem.software }}</p>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,63 @@
+<div class="container py-5">
+  <div class="text-center mb-4">
+    <h2>Our Labs</h2>
+  </div>
+
+  <div class="row g-4">
+    <!-- g-4 gives good spacing -->
+    <div class="col-md-6 col-lg-3" *ngFor="let lab of labs">
+      <div class="card custom-card h-100">
+        <div
+          class="card-image"
+          [style.backgroundImage]="'url(' + lab.src + ')'"
+        >
+          <div class="overlay">
+            <h5 class="card-title">{{ lab.title }}</h5>
+            <button
+              class="btn btn-light take-over"
+              (click)="onTakeOverClick(lab.key)"
+            >
+              Further Details <i class="fa fa-arrow-right arrow-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Technology Stack Section -->
+<p class="tech-heading text-center mt-5">Our Technology Stack</p>
+
+<div
+  class="tech-stack-container d-flex flex-wrap justify-content-center gap-4 mt-4 px-3 px-md-5"
+>
+  <div
+    class="tech-item"
+    *ngFor="let tech of techStack"
+    data-aos="zoom-in"
+    data-aos-duration="800"
+  >
+    <img [src]="tech" class="tech-logo" alt="Technology Logo" />
+  </div>
+</div>
+
+
+
+
+
+
+
+<!--about company-->
+
+<div class="about-section my-5">
+  <div class="about-image"></div>
+  <div class="about-text">
+    <h2>About Our Company</h2>
+    <p>
+      We are driven by innovation, providing exciting job opportunities and a
+      friendly work culture. Our labs empower individuals to shape the future
+      through cutting-edge research and collaboration.
+    </p>
+  </div>
+</div>
